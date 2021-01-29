@@ -16,8 +16,8 @@ Metadata:
           - DBPassword
           - WUMUsername
           - WUMPassword
-	      - JenkinsUsername
-	      - JenkinsAPIToken
+          - JenkinsUsername
+          - JenkinsAPIToken
       - Label:
           default: Advanced Configuration
         Parameters:
