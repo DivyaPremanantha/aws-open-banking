@@ -751,18 +751,7 @@ Resources:
                   fi
               done
           fi
-          if [[ ${OperatingSystem} == "CentOS7" ]]; then
-              end=$((SECONDS+1200))
-              while [ $SECONDS -lt $end ] ; do
-                  sleep 10
-                  wget --delete-after --server-response --no-check-certificate "https://localhost:9443/carbon/admin/login.jsp"
-                  if [ $? -eq "0" ] ; then
-                      /usr/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WSO2OBNode1AutoScalingGroup --region ${AWS::Region}
-                      break
-                  fi
-              done
-          fi
-          if [[ ${OperatingSystem} == "SUSE12" ]]; then
+          if [[ ${OperatingSystem} == "CentOS7" || ${OperatingSystem} == "SUSE12"]]; then
               end=$((SECONDS+1200))
               while [ $SECONDS -lt $end ] ; do
                   sleep 10
@@ -932,18 +921,7 @@ Resources:
                   fi
               done
           fi
-          if [[ ${OperatingSystem} == "CentOS7" ]]; then
-              end=$((SECONDS+1200))
-              while [ $SECONDS -lt $end ] ; do
-                  sleep 10
-                  wget --delete-after --server-response --no-check-certificate "https://localhost:9446/carbon/admin/login.jsp"
-                  if [ $? -eq "0" ] ; then
-                      /usr/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WSO2OBNode2AutoScalingGroup --region ${AWS::Region}
-                      break
-                  fi
-              done
-          fi
-          if [[ ${OperatingSystem} == "SUSE12" ]]; then
+          if [[ ${OperatingSystem} == "CentOS7" || ${OperatingSystem} == "SUSE12"]]; then
               end=$((SECONDS+1200))
               while [ $SECONDS -lt $end ] ; do
                   sleep 10
@@ -1222,35 +1200,13 @@ Mappings:
     us-east-1:
        Ubuntu1804: ami-0fb599bfd6928dd1b
   WSO2OBAMIRegionMap:
-    ap-southeast-2:
-      CentOS7: ami-0211f0ecd0e693937
-      Ubuntu1804: ami-0fc37bfc486b80d6d
-      SUSE12: ami-0f281af274607fc16
-    eu-west-1:
-      CentOS7: ami-08137d567f9e9413e
-      Ubuntu1804: ami-005de30fe41bbe8f3
-      SUSE12: ami-0811824bbed67b55c
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
       Ubuntu1804: ami-02a2048d0e4afcd10
       SUSE12: ami-07a06c97eca8c1faf
-    us-east-2:
-      CentOS7: ami-009ac95229cc07041
-      Ubuntu1804: ami-0a1af21a7b34de8f7
-      SUSE12: ami-0af0962fc8331524b
-    us-west-1:
-      CentOS7: ami-0062ecf9cd0c8417d
-      Ubuntu1804: ami-02cfec9ab1330bcbb
-      SUSE12: ami-000cdd8eca5eac9a3
-    us-west-2:
-      CentOS7: ami-0cbe0a37066de0538
-      Ubuntu1804: ami-0cc3da810abe655e0
-      SUSE12: ami-0582cbca8b393fd62
   DBEngineMap:
     MySQL-5.7:
       DBEngine: "mysql_5.7"
-    MySQL-5.6:
-      DBEngine: "mysql_5.6"
     Postgres-9.4.12:
       DBEngine: "postgres_9.4.12"
     Postgres-9.6:
