@@ -1197,11 +1197,11 @@ Outputs:
 Mappings:
   WSO2OBPuppetMasterRegionMap:
     us-east-1:
-       Ubuntu1804: ami-0fb599bfd6928dd1b
+       Ubuntu1804: ami-067ce1247ec42a63f
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
-      Ubuntu1804: ami-067ce1247ec42a63f
+      Ubuntu1804: ami-02a2048d0e4afcd10
       SUSE12: ami-07a06c97eca8c1faf
   DBEngineMap:
     MySQL-5.7:
