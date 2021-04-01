@@ -1201,7 +1201,7 @@ Mappings:
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
-      Ubuntu1804: ami-0043a45a2ce494674
+      Ubuntu1804: ami-067ce1247ec42a63f
       SUSE12: ami-07a06c97eca8c1faf
   DBEngineMap:
     MySQL-5.7:
