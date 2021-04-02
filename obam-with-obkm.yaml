@@ -414,7 +414,7 @@ Resources:
     CreationPolicy:
       ResourceSignal:
         Count: 1
-        Timeout: PT30M
+        Timeout: PT60M
     Properties:
       DisableApiTermination: 'false'
       InstanceInitiatedShutdownBehavior: stop
@@ -422,7 +422,7 @@ Resources:
         - WSO2OBPuppetMasterRegionMap
         - !Ref 'AWS::Region'
         - Ubuntu1804
-      InstanceType: !Ref WSO2InstanceType
+      InstanceType: t2.large
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
