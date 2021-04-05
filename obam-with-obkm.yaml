@@ -422,7 +422,7 @@ Resources:
         - WSO2OBPuppetMasterRegionMap
         - !Ref 'AWS::Region'
         - Ubuntu1804
-      InstanceType: t2.large
+      InstanceType: t2.medium
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -1198,7 +1198,7 @@ Outputs:
 Mappings:
   WSO2OBPuppetMasterRegionMap:
     us-east-1:
-       Ubuntu1804: ami-067ce1247ec42a63f
+       Ubuntu1804: ami-02946bf6dee6994be
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
