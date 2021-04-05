@@ -422,7 +422,7 @@ Resources:
         - WSO2OBPuppetMasterRegionMap
         - !Ref 'AWS::Region'
         - Ubuntu1804
-      InstanceType: t2.medium
+      InstanceType: !Ref WSO2InstanceType
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
