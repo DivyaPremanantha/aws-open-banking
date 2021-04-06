@@ -414,7 +414,7 @@ Resources:
     CreationPolicy:
       ResourceSignal:
         Count: 1
-        Timeout: PT60M
+        Timeout: PT1H
     Properties:
       DisableApiTermination: 'false'
       InstanceInitiatedShutdownBehavior: stop
