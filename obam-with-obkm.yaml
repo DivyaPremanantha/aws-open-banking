@@ -1198,7 +1198,7 @@ Outputs:
 Mappings:
   WSO2OBPuppetMasterRegionMap:
     us-east-1:
-       Ubuntu1804: ami-0cef1e2715c5e00d9
+       Ubuntu1804: ami-0db4e08d47326d706
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
