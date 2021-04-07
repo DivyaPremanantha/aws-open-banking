@@ -504,7 +504,6 @@ Resources:
             - chmod +x /home/ubuntu/wso2-update.sh
             - aws s3 cp s3://wum-for-testgrid/uat-config.json /home/ubuntu/uat-config.json
             - !Sub "/home/ubuntu/wso2-update.sh '${WUMUsername}' '${WUMPassword}' wso2-obam-${ProductVersion}"
-            - aws s3 cp s3://wum-for-testgrid/uat-config.json /home/ubuntu/uat-config.json
             - !Sub "/home/ubuntu/wso2-update.sh '${WUMUsername}' '${WUMPassword}' wso2-obiam-${ProductVersion}"
             - !Sub "/usr/local/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WSO2OBPuppetMaster --region ${AWS::Region}"
             - !Join
@@ -1200,7 +1199,7 @@ Outputs:
 Mappings:
   WSO2OBPuppetMasterRegionMap:
     us-east-1:
-       Ubuntu1804: ami-0db4e08d47326d706
+       Ubuntu1804: ami-006192cd0f43087f6
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
