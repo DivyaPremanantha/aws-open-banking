@@ -642,7 +642,7 @@ Resources:
         - WSO2OBAMIRegionMap
         - !Ref 'AWS::Region'
         - !Ref OperatingSystem
-      InstanceType: !Ref WSO2InstanceType
+      InstanceType: t2.large
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -814,7 +814,7 @@ Resources:
         - WSO2OBAMIRegionMap
         - !Ref 'AWS::Region'
         - !Ref OperatingSystem
-      InstanceType: !Ref WSO2InstanceType
+      InstanceType: t2.large
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
