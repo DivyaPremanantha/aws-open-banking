@@ -107,6 +107,7 @@ Parameters:
     AllowedValues:
       - "OPEN_JDK8"
       - "CORRETTO_JDK8"
+      - "ADOPT_OPEN_JDK11"
   ProductVersion:
     Type: String
     Default: 2.0.0
