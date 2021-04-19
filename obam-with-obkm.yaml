@@ -103,7 +103,7 @@ Parameters:
     Default: "echo"
   JDK:
     Type: String
-    Default: "OPEN_JDK8"
+    Default: "ADOPT_OPEN_JDK11"
     AllowedValues:
       - "OPEN_JDK8"
       - "CORRETTO_JDK8"
