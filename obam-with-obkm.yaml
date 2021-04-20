@@ -103,7 +103,7 @@ Parameters:
     Default: "echo"
   JDK:
     Type: String
-    Default: "Oracle_JDK8"
+    Default: "ADOPT_OPEN_JDK11"
     AllowedValues:
       - "OPEN_JDK8"
       - "CORRETTO_JDK8"
@@ -1201,7 +1201,7 @@ Outputs:
 Mappings:
   WSO2OBPuppetMasterRegionMap:
     us-east-1:
-       Ubuntu1804: ami-0a4f7680bda8e59d5
+       Ubuntu1804: ami-07534837fe9cbb6b7
   WSO2OBAMIRegionMap:
     us-east-1:
       CentOS7: ami-09d4e63ccc46083c7
