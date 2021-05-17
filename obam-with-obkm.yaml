@@ -738,7 +738,7 @@ Resources:
           if [[ ${OperatingSystem} == "SUSE12" ]]; then
               /opt/puppetlabs/puppet/bin/puppet agent -vt >> /var/log/puppetlog.log
           fi
-          wget --no-check-certificate --no-proxy 'https://testgrid-resources.s3.amazonaws.com/ob-dep-resources/AM_client-truststore.jks' && mv -f AM_client-truststore.jks /mnt/obam/wso2-obam-${ProductVersion}/repository/resources/security/client-truststore.jks
+          wget --no-check-certificate --no-proxy 'https://testgrid-resources.s3.amazonaws.com/ob-dep-resources/2.0.0/AM_client-truststore.jks' && mv -f AM_client-truststore.jks /mnt/obam/wso2-obam-${ProductVersion}/repository/resources/security/client-truststore.jks
           sleep 30
           /mnt/obam/wso2-obam-${ProductVersion}/bin/wso2server.sh start
           ${CustomUserData}
@@ -909,7 +909,7 @@ Resources:
           fi
           sleep 30
           echo "--puppet completed--"
-          wget --no-check-certificate --no-proxy 'https://testgrid-resources.s3.amazonaws.com/ob-dep-resources/KM_client-truststore.jks' && mv -f KM_client-truststore.jks /mnt/obiam/wso2-obiam-${ProductVersion}/repository/resources/security/client-truststore.jks
+          wget --no-check-certificate --no-proxy 'https://testgrid-resources.s3.amazonaws.com/ob-dep-resources/2.0.0/KM_client-truststore.jks' && mv -f KM_client-truststore.jks /mnt/obiam/wso2-obiam-${ProductVersion}/repository/resources/security/client-truststore.jks
           /mnt/obiam/wso2-obiam-${ProductVersion}/bin/wso2server.sh start
           ${CustomUserData}
           sleep 30
